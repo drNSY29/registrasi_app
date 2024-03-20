@@ -17,10 +17,6 @@
 					</tr>
 	
 					<tr>
-						<td width='200'>Peserta <?php echo form_error('peserta') ?></td><td><input type="text" class="form-control" name="peserta" id="peserta" placeholder="Peserta" value="<?php echo $peserta; ?>" /></td>
-					</tr>
-	
-					<tr>
 						<td width='200'>Gender <?php echo form_error('gender') ?></td><td><input type="text" class="form-control" name="gender" id="gender" placeholder="Gender" value="<?php echo $gender; ?>" /></td>
 					</tr>
 	

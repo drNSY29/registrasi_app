@@ -21,11 +21,6 @@
 			</tr>
 	
 			<tr>
-				<td>Peserta</td>
-				<td><?php echo $peserta; ?></td>
-			</tr>
-	
-			<tr>
 				<td>Gender</td>
 				<td><?php echo $gender; ?></td>
 			</tr>

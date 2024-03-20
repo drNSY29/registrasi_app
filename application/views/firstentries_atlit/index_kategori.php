@@ -51,7 +51,6 @@
                                     <th>No</th>
                                     <th>Kelas</th>
                                     <th>Kategori</th>
-                                    <th>Peserta</th>
                                     <th>Gender</th>
                                     <th>Action</th>
                                 </tr><?php
@@ -61,7 +60,6 @@
                                         <td width="10px"><?php echo ++$start ?></td>
                                         <td><?php echo $firstentries_atlit->kelas ?></td>
                                         <td><?php echo $firstentries_atlit->kategori ?></td>
-                                        <td><?php echo $firstentries_atlit->peserta ?></td>
                                         <td><?php echo $firstentries_atlit->gender ?></td>
                                         <td style="text-align:center" width="200px">
                                             <?php

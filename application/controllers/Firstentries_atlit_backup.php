@@ -10,44 +10,10 @@ class Firstentries_atlit extends CI_Controller
         parent::__construct();
         //is_login();
         $this->load->model('Firstentries_atlit_model');
-        $this->load->model('Firstentries_atlit_peserta_model');
         $this->load->library('form_validation');
     }
 
     public function index()
-    {
-        // $q = urldecode($this->input->get('q', TRUE));
-        // $start = intval($this->uri->segment(3));
-
-        // if ($q <> '') {
-        //     $config['base_url'] = base_url() . '.php/c_url/index.html?q=' . urlencode($q);
-        //     $config['first_url'] = base_url() . 'index.php/firstentries_atlit/index.html?q=' . urlencode($q);
-        // } else {
-        //     $config['base_url'] = base_url() . 'index.php/firstentries_atlit/index/';
-        //     $config['first_url'] = base_url() . 'index.php/firstentries_atlit/index/';
-        // }
-
-        // $config['per_page'] = 10;
-        // $config['page_query_string'] = FALSE;
-        // $config['total_rows'] = $this->Firstentries_atlit_model->total_rows($q);
-        // $firstentries_atlit = $this->Firstentries_atlit_model->get_limit_data($config['per_page'], $start, $q);
-        // $config['full_tag_open'] = '<ul class="pagination pagination-sm no-margin pull-right">';
-        // $config['full_tag_close'] = '</ul>';
-        // $this->load->library('pagination');
-        // $this->pagination->initialize($config);
-        $firstentries_atlit_data = $this->Firstentries_atlit_peserta_model->get_by_kategori();
-        $data = array(
-            'firstentries_atlit_data' => $firstentries_atlit_data
-            // 'firstentries_atlit_data' => $firstentries_atlit,
-            // 'q' => $q,
-            // 'pagination' => $this->pagination->create_links(),
-            // 'total_rows' => $config['total_rows'],
-            // 'start' => $start,
-        );
-        $this->template->load('template', 'firstentries_atlit/index_gabungan', $data);
-    }
-
-    public function index_kategori()
     {
         $q = urldecode($this->input->get('q', TRUE));
         $start = intval($this->uri->segment(3));
@@ -76,7 +42,7 @@ class Firstentries_atlit extends CI_Controller
             'total_rows' => $config['total_rows'],
             'start' => $start,
         );
-        $this->template->load('template', 'firstentries_atlit/index_kategori', $data);
+        $this->template->load('template', 'firstentries_atlit/firstentries_atlit_list', $data);
     }
 
     public function read($id)

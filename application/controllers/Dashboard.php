@@ -9,6 +9,7 @@ class Dashboard extends CI_Controller
         parent::__construct();
         $this->load->model('Firstentries_teamoff_model');
         $this->load->model('Firstentries_atlit_model');
+        $this->load->model('Firstentries_atlit_peserta_model');
         $this->load->model('Secondentries_atlit_model');
         $this->load->library('form_validation');
     }
@@ -16,12 +17,12 @@ class Dashboard extends CI_Controller
     public function first_entries()
     {
         $firstentries_teamoff = $this->Firstentries_teamoff_model->get_all();
-        $firstentries_atlit_cadet_laki = $this->Firstentries_atlit_model->count_cadet_laki();
-        $firstentries_atlit_cadet_perempuan = $this->Firstentries_atlit_model->count_cadet_perempuan();
+        // $firstentries_atlit_cadet_laki = $this->Firstentries_atlit_model->count_cadet_laki();
+        // $firstentries_atlit_cadet_perempuan = $this->Firstentries_atlit_model->count_cadet_perempuan();
         $data = array(
             'firstentries_teamoff_data' => $firstentries_teamoff,
-            'firstentries_atlit_cadet_laki' => $firstentries_atlit_cadet_laki,
-            'firstentries_atlit_cadet_perempuan' => $firstentries_atlit_cadet_perempuan
+            // 'firstentries_atlit_cadet_laki' => $firstentries_atlit_cadet_laki,
+            // 'firstentries_atlit_cadet_perempuan' => $firstentries_atlit_cadet_perempuan
         );
         $this->template->load('template', 'dashboard/first_entries', $data);
     }

@@ -45,23 +45,23 @@
                             </tr>
                             <tr>
                                 <td>Cadet</td>
-                                <td>999</td>
-                                <td>999</td>
+                                <td><?= $firstentries_atlit_cadet_laki ?></td>
+                                <td><?= $firstentries_atlit_cadet_perempuan ?></td>
                             </tr>
                             <tr>
                                 <td>Junior</td>
-                                <td>999</td>
-                                <td>999</td>
+                                <td><?= $firstentries_atlit_cadet_laki ?></td>
+                                <td><?= $firstentries_atlit_cadet_perempuan ?></td>
                             </tr>
                             <tr>
                                 <td>Under 21</td>
-                                <td>999</td>
-                                <td>999</td>
+                                <td><?= $firstentries_atlit_cadet_laki ?></td>
+                                <td><?= $firstentries_atlit_cadet_perempuan ?></td>
                             </tr>
                             <tr>
                                 <td>Senior</td>
-                                <td>999</td>
-                                <td>999</td>
+                                <td><?= $firstentries_atlit_cadet_laki ?></td>
+                                <td><?= $firstentries_atlit_cadet_perempuan ?></td>
                             </tr>
 
                         </table>
